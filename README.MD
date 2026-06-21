@@ -30,6 +30,16 @@ CO-UI reimagines this flow:
     *   **Site & Flow Scaper**: Import or search for design references, layouts, and UX flows from other web applications to build unique patterns.
     *   **Direct Code Generation**: The AI processes the canvas layout, selected assets, and custom design logic to output production-ready UI components.
 
+### 💬 Version 3: Real-Time Design Iteration & Extension Sync
+*   **Extension-to-Agent Live Bridge**: Establish real-time communication between the browser extension and the agentic platform.
+*   **Interactive Design Variants**: Allow users/designers to try different design iterations directly inside the browser extension.
+*   **Direct Selection Sync**: The selected/approved design variant is automatically passed to the project's code-generation agent for immediate patching and deployment, bypassing manual copy-paste.
+
+### 📁 Version 4: Design File Parsing & Direct Imports
+*   **Native Design Imports**: Support importing design files (such as Figma files via APIs or local files) directly into the platform.
+*   **Automatic Layout Extraction**: The platform parses design layouts, text, fonts, colors, and asset positioning.
+*   **Agentic Reconstruction**: The agent automatically reconstructs design files into fully functional codebases while preserving original design systems.
+
 ---
 
 ## 🛠️ Tech Stack & Integration
