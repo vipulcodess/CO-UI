@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CO-UI Prompt Builder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="card">
+    <!-- Header -->
+    <header class="header">
+      <div class="logo-container">
+        <div class="logo-icon"></div>
+        <h1>CO-UI</h1>
+      </div>
+      <span class="badge">v1.0.0</span>
+    </header>
+
+    <!-- Content -->
+    <main class="main-content">
+      
+      <!-- Selection / Targeting Section -->
+      <section class="form-group">
+        <label class="form-label">
+          <span>Target Element</span>
+          <button id="btn-inspect" class="btn-inspect-mode" title="Pick element from active page">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M3 12h3m12 0h3M12 3v3m0 12v3"></path>
+            </svg>
+            <span>Inspect Page</span>
+          </button>
+        </label>
+        
+        <div class="input-container">
+          <input type="text" id="input-selector" placeholder="e.g. #submit-btn, .card-body > div, or XPath" spellcheck="false" />
+        </div>
+      </section>
+
+      <!-- Description / Request Section -->
+      <section class="form-group">
+        <label for="input-query" class="form-label">Desired Change Query</label>
+        <div class="textarea-container">
+          <textarea id="input-query" rows="3" placeholder="Describe the UI change you want to make (e.g. Make this button deep violet, add a subtle glow, and change label to 'Confirm')"></textarea>
+        </div>
+      </section>
+
+      <!-- Action Button -->
+      <button id="btn-generate" class="btn-primary">
+        <span>Generate Prompt</span>
+        <svg class="icon-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
+
+      <!-- Output / Preview Section -->
+      <section id="preview-section" class="form-group preview-section hidden">
+        <div class="preview-header">
+          <span class="form-label">Generated Agent Prompt</span>
+          <button id="btn-copy" class="btn-secondary" title="Copy to Clipboard">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+            <span>Copy</span>
+          </button>
+        </div>
+        <div class="output-box">
+          <pre id="output-text"></pre>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <span>Agentic UI/UX Development Platform</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

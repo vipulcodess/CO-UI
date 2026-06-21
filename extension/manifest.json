@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "CO-UI Context Prompt Generator",
+  "version": "1.0.0",
+  "description": "Select elements and compile precise prompts for agentic UI/UX development.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
